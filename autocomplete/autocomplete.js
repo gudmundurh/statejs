@@ -6,54 +6,63 @@ function getCompletions(text) {
 }
 
 $(document).ready(function() {
-    var system = new StateSystem();
-    system.DefineStates('blur', 'focus', 'typing', 'autocomplete');
+    var system = new StateSystem('input');
+    system.DefineStates('blurred', 'focused', 'typing', 'autocomplete');
 
-    system.In('blur').Find('input').On('focus').Goto('focus');
-    system.Enter('blur').Do(function() {
-        $('input').blur();
-    });
+    system.In('blurred').On('focus').Goto('focused');
+    system.InAny().On('blur').Goto('blurred');
 
-    system.In('focus').Find('input').On('keypress').Goto('typing');
-    system.In('focus').Find('input').On('blur').Goto('blur');
+    system.In('focused').On(KeyDown).Goto('typing');
 
-    system.In('typing').Find('input').On('keypress').Goto('typing');
+    system.In('typing').On(KeyDown).Goto('typing');
     system.In('typing').After(1000).Goto('autocomplete');
-    system.In('typing').Find('input').On('blur').Goto('blur');
 
-    system.In('autocomplete').Find('input').On('blur').Goto('blur');
-    system.In('autocomplete').Find('input').On('blur').Goto('blur');
-    system.In('autocomplete').Find('input').On(KeyUp.Escape).Goto('typing');
-    system.In('autocomplete').Find('input').On(KeyUp.Up).Do(function() { moveSelection(-1) });
-    system.In('autocomplete').Find('input').On(KeyUp.Down).Do(function() { moveSelection(+1) });
-    system.In('autocomplete').Find('input').On('keyup').Goto('autocomplete');
+    system.In('autocomplete').On(KeyDown.Escape).Goto('focused');
+    system.In('autocomplete').On(KeyDown.Up).Do(moveSelectionUp);
+    system.In('autocomplete').On(KeyDown.Down).Do(moveSelectionDown);
+    system.In('autocomplete').On(KeyDown.Enter).Do(setSelection);
+    system.In('autocomplete').On(KeyDown).Goto('autocomplete');
 
     system.Enter('autocomplete').Do(showCompletions);
     system.Leave('autocomplete').Do(hideCompletions);
 
     system.Goto('blur');
 
-    _.each(_.rest(system.states), function(state) {
+    _.each(system.states, function(state) {
         system.Enter(state.name).Do(_.bind(console.log, console, 'Entered ' + state.name));
     });
 
     function showCompletions() {
-        var completions = getCompletions($('input').val());
-        var ul = $('.autocomplete-wrapper ul').empty();
+        var completions = getCompletions($(this).val());
+        var ul = $(this).parent().find('ul').empty();
         _.each(completions, function(completion) {
             ul.append('<li>' + completion + '</li>');
         });
         ul.find('li:first').addClass('selected');
         ul.show();
     }
-    
-    function hideCompletions() {
-        $('.autocomplete-wrapper ul').hide();
+
+    function setSelection() {
+        var ul = $(this).parent().find('ul');
+        $(this).val(ul.find('.selected').text());
+        system.Goto('focus');
     }
 
-    function moveSelection(direction) {
-        var ul = $('.autocomplete-wrapper ul');
-        var method = direction > 0 ? 'next' : 'prev';
+    function hideCompletions() {
+        var ul = $(this).parent().find('ul');
+        ul.hide();
+    }
+
+    function moveSelectionUp() {
+        moveSelection.call(this, 'prev');
+    }
+
+    function moveSelectionDown() {
+        moveSelection.call(this, 'next');
+    }
+
+    function moveSelection(method) {
+        var ul = $(this).parent().find('ul');
 
         var oldSelection = ul.find('.selected');
         var newSelection = oldSelection[method]();
@@ -68,21 +77,10 @@ $(document).ready(function() {
 
 /* Additions:
 
- Define events for all states, eins og t.d. fyrir blur hér að ofan
- Give the system context, and:
- Make .On() work in global context, i.e. system.In('state').On('focus')...
-
- Add event conditions to .On(), as in .On(keypress, function(ev){ return ev.keyCode == 27 })
- and then define KeyPress.Escape = function(ev){ return ev.keyCode==27 }),
- so we can do:
- .On('keypress', KeyPress.Escape)
- and then eventually
- .On(KeyPress.Escape)
-
- VERY NICE TO HAVE:
+VERY NICE TO HAVE:
  Draw graph of the state system :D
 
-Auto-states corresponding to DOM events, e.g. focus/blur
+ Auto-states corresponding to DOM events, e.g. focus/blur
 
  */
 
