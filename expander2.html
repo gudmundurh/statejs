@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>expander2</title>
+	<script type="text/javascript" charset="utf-8" src="statesystem.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../lib/jquery-1.3.2.js"></script>
+</head>
+<body>
+	<div id="expander">
+		<ul>
+			<li>A</li>
+			<li>B</li>
+		</ul>
+		<ul class="extra">
+			<li>C</li>
+			<li>D</li>
+			<li>E</li>
+			<li>F</li>
+		</ul>
+		<a href="#">Expand</a>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+		var system = new StateSystem();
+		system.DefineStates('collapsed', 'expanded');
+		system.Find('a').StateProperty('text', {collapsed: 'Expand', expanded: 'Collapse'});
+		system.Find('.extra').StateProperty('css', {collapsed: {display:'none'}, expanded: {display:'block'}});
+
+		system.In('expanded').Find('a').On('click').Goto('collapsed');
+		system.In('collapsed').Find('a').On('click').Goto('expanded');
+
+		system.Goto('collapsed'); // Should this be default?
+	</script>
+</body>
+</html>

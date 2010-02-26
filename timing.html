@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>expander2</title>
+	<script type="text/javascript" charset="utf-8" src="statesystem.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../lib/jquery-1.3.2.js"></script>
+</head>
+<body>
+	<div id="panel">
+		<p>Current state:
+			<span class="state"></span>
+		</p>
+		
+		<p><a href="#">Cycle states</a></p>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+		var system = new StateSystem();
+		system.DefineStates('red', 'blue', 'green');
+		system.Find('a').On('click').Cycle('red', 'blue', 'green');
+		system.Find('.state').StateProperty('text', {red: 'red', blue: 'blue', green: 'green'});
+		system.In('red').After(2000).Do(function(){ console.log('been 2sec in red') });
+		
+		system.Goto('red'); // Should this be default?
+	</script>
+</body>
+</html>
