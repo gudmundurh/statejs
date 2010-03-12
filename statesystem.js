@@ -1,5 +1,3 @@
-//var console = console || { log: function() {
-//} };
 
 
 function State(name, elementSelector) {
@@ -52,7 +50,7 @@ State.prototype = {
 
 function StateSystem(rootSelector) {
     this.rootSelector = rootSelector;
-    this.states = [new State("start")];
+    this.states = [new State("start", null)];
     this.currentState = this.states[0];
 }
 
@@ -125,6 +123,16 @@ StateSystem.prototype = {
         throw new Error("getStateByName: No state named " + name);
     }
 };
+
+StateSystem.prototype.SetupDebug = function() {
+    var system = this;
+    $.each(this.states, function(i, state) {
+        system.Enter(state.name).Do(function() {
+            console.log('Entered ' + state.name);
+        });
+    });
+};
+
 
 function StateChangeContext(eventName, state) {
     this.eventName = eventName;

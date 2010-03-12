@@ -1,9 +1,3 @@
-function getCompletions(text) {
-    var suffixes = ["hundur", " fiðla", "píanó", "leikjatölva"];
-    return _.map(suffixes, function(suffix) {
-        return text + suffix
-    });
-}
 
 $(document).ready(function() {
     var system = new StateSystem('input');
@@ -11,6 +5,8 @@ $(document).ready(function() {
 
     system.In('blurred').On('focus').Goto('focused');
     system.InAny().On('blur').Goto('blurred');
+
+    system.InAny().On('dblclick').Goto('autocomplete');
 
     system.In('focused').On(KeyDown).Goto('typing');
 
@@ -20,22 +16,22 @@ $(document).ready(function() {
     system.In('autocomplete').On(KeyDown.Escape).Goto('focused');
     system.In('autocomplete').On(KeyDown.Up).Do(moveSelectionUp);
     system.In('autocomplete').On(KeyDown.Down).Do(moveSelectionDown);
-    system.In('autocomplete').On(KeyDown.Enter).Do(setSelection);
+    system.In('autocomplete').On(KeyDown.Enter).Do(setSelection); // .and.Goto('focused');
     system.In('autocomplete').On(KeyDown).Goto('autocomplete');
 
     system.Enter('autocomplete').Do(showCompletions);
     system.Leave('autocomplete').Do(hideCompletions);
 
-    system.Goto('blur');
+    system.Goto('blurred');
 
-    _.each(system.states, function(state) {
-        system.Enter(state.name).Do(_.bind(console.log, console, 'Entered ' + state.name));
-    });
+    system.SetupDebug();    
+
 
     function showCompletions() {
         var completions = getCompletions($(this).val());
-        var ul = $(this).parent().find('ul').empty();
-        _.each(completions, function(completion) {
+        var ul = $(this).parent().find('ul');
+        ul.empty();
+        $.each(completions, function(i, completion) {
             ul.append('<li>' + completion + '</li>');
         });
         ul.find('li:first').addClass('selected');
@@ -45,7 +41,7 @@ $(document).ready(function() {
     function setSelection() {
         var ul = $(this).parent().find('ul');
         $(this).val(ul.find('.selected').text());
-        system.Goto('focus');
+        system.Goto('focused');
     }
 
     function hideCompletions() {
@@ -82,25 +78,27 @@ VERY NICE TO HAVE:
 
  Auto-states corresponding to DOM events, e.g. focus/blur
 
- */
+Important:
+To keep the state-logic in one place, all state-changing actions (Goto/Cycle) should
+ be set up with the system, but not invoked directly on the system, like is currently
+ done within custom Do functions
 
+IDEAS
+Parametrized states: Would be ideal to extend the state system to all possible states, not
+ just abstract ones. autocomplete(i) would then indicate that autocompletion is visible,
+ with option i selected.
 
-/*
+ Could help in many different scenarios, like for accordian controls, menus etc.
 
- in blur:
- on focus -> goto focus
-
- in focus:
- on change -> goto typing
-
- in typing:
- on change -> goto typing
- after 500 msec -> autocomplete
-
- in autocomplete:
- on change -> goto autocomplete
- on enter -> set text to selected text; goto typing
- on up/down -> change selection; goto??
- on blur -> goto blur
+ In('autocomplete(i<last)').On(KeyDown.Down).Goto('autocomplete(i+1)')
+ In('autocomplete(i>first)').On(KeyDown.Up).Goto('autocomplete(i-1)')
+ Enter('autocomplete(i)').Do(function(i){ setSelection(i) });
 
  */
+
+function getCompletions(text) {
+    var suffixes = ["hundur", " fiðla", "píanó", "leikjatölva"];
+    return $.map(suffixes, function(suffix) {
+        return text + suffix
+    });
+}
