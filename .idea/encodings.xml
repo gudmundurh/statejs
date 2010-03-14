@@ -3,7 +3,10 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tooltip/tooltip.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/statesystem.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/qunit/qunit.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/qunit/qunit.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/testrunner.html" charset="UTF-8" />
   </component>
 </project>
 

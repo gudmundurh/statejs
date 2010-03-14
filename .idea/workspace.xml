@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="d9ebfe70-676d-40e2-a0a0-8c2a28b71489" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\gh\lab\statesystem\autocomplete\autocomplete.html" afterPath="" />
+    <list default="true" readonly="true" id="d9ebfe70-676d-40e2-a0a0-8c2a28b71489" name="Default" comment="Lot of syntatic sugar">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/autocomplete/autocomplete.css" />
-      <change type="MOVED" beforePath="C:\gh\lab\statesystem\expander.html" afterPath="$PROJECT_DIR$/examples/expander.html" />
-      <change type="MOVED" beforePath="C:\gh\lab\statesystem\underscore.js" afterPath="$PROJECT_DIR$/external/underscore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js" />
+      <change type="DELETED" beforePath="C:\gh\lab\statesystem\autocomplete\autocomplete.html" afterPath="" />
+      <change type="MOVED" beforePath="C:\gh\lab\statesystem\timing.html" afterPath="$PROJECT_DIR$/examples/timing.html" />
+      <change type="MOVED" beforePath="C:\gh\lab\statesystem\expander2.html" afterPath="$PROJECT_DIR$/examples/expander2.html" />
+      <change type="MOVED" beforePath="C:\gh\lab\statesystem\autocomplete\autocomplete.js" afterPath="$PROJECT_DIR$/examples/autocomplete/autocomplete.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statesystem.js" afterPath="$PROJECT_DIR$/statesystem.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/autocomplete/autocomplete.html" />
-      <change type="MOVED" beforePath="C:\gh\lab\statesystem\autocomplete\autocomplete.js" afterPath="$PROJECT_DIR$/examples/autocomplete/autocomplete.js" />
-      <change type="MOVED" beforePath="C:\gh\lab\statesystem\timing.html" afterPath="$PROJECT_DIR$/examples/timing.html" />
+      <change type="MOVED" beforePath="C:\gh\lab\statesystem\underscore.js" afterPath="$PROJECT_DIR$/external/underscore.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/tooltip/tooltip.html" />
-      <change type="MOVED" beforePath="C:\gh\lab\statesystem\expander2.html" afterPath="$PROJECT_DIR$/examples/expander2.html" />
+      <change type="MOVED" beforePath="C:\gh\lab\statesystem\expander.html" afterPath="$PROJECT_DIR$/examples/expander.html" />
     </list>
-    <ignored path=".idea/workspace.xml" />
     <ignored path="statesystem.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,37 +37,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="autocomplete.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.js">
+      <file leaf-file-name="statesystem.tests.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/statesystem.tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tooltip.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/tooltip/tooltip.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="8" selection-start="181" selection-end="181" vertical-scroll-proportion="0.1522388">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocomplete_with.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="1" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocomplete.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="88" selection-start="500" selection-end="500" vertical-scroll-proportion="-7.0833335">
+            <state line="112" column="9" selection-start="2943" selection-end="2943" vertical-scroll-proportion="0.5136">
               <folding />
             </state>
           </provider>
@@ -76,7 +49,16 @@
       <file leaf-file-name="statesystem.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statesystem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="28" selection-start="5549" selection-end="5549" vertical-scroll-proportion="0.0">
+            <state line="235" column="25" selection-start="6778" selection-end="6778" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testrunner.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/testrunner.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="64" selection-start="349" selection-end="349" vertical-scroll-proportion="-4.9259257">
               <folding />
             </state>
           </provider>
@@ -100,12 +82,16 @@
         <option value="$PROJECT_DIR$/autocomplete/autocomplete.html" />
         <option value="$PROJECT_DIR$/autocomplete/autocomplete_with.js" />
         <option value="$PROJECT_DIR$/autocomplete/autocomplete.js" />
-        <option value="$PROJECT_DIR$/statesystem.js" />
         <option value="$PROJECT_DIR$/examples/autocomplete/autocomplete.css" />
         <option value="$PROJECT_DIR$/examples/autocomplete/autocomplete.html" />
         <option value="$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js" />
-        <option value="$PROJECT_DIR$/examples/autocomplete/autocomplete.js" />
         <option value="$PROJECT_DIR$/examples/tooltip/tooltip.html" />
+        <option value="$PROJECT_DIR$/examples/autocomplete/autocomplete.js" />
+        <option value="$PROJECT_DIR$/tests/qunit/qunit.js" />
+        <option value="$PROJECT_DIR$/tests/qunit/qunit.css" />
+        <option value="$PROJECT_DIR$/tests/testrunner.html" />
+        <option value="$PROJECT_DIR$/statesystem.js" />
+        <option value="$PROJECT_DIR$/tests/statesystem.tests.js" />
       </list>
     </option>
   </component>
@@ -135,27 +121,58 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
+              <option name="myItemId" value="statejs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
+              <option name="myItemId" value="statejs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
+              <option name="myItemId" value="statejs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
+              <option name="myItemId" value="statejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qunit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statejs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -163,49 +180,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statesystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autocomplete" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="File.Encoding" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.sourceCode.JavaScript / ECMAScript / ActionScript" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -222,14 +208,14 @@
   <component name="RunManager" selected="JavaScript Debug.autocomplete.html">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="autocomplete.html" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" value="file://$PROJECT_DIR$/autocomplete/autocomplete.html" />
       </JSDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
@@ -253,12 +239,13 @@
     <option name="DETECT_NESTED_COPIES" value="true" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <configuration useDefault="true">C:\Users\ghreidarsson\AppData\Roaming\Subversion</configuration>
+    <configuration useDefault="true">$PROJECT_DIR$/../../.subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="d9ebfe70-676d-40e2-a0a0-8c2a28b71489" name="Default" comment="" />
       <created>1267121352450</created>
       <updated>1267121352450</updated>
     </task>
@@ -285,26 +272,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24928367" sideWeight="0.34951457" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24928367" sideWeight="0.59084606" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1950637" sideWeight="0.59084606" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994452" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994452" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -340,72 +327,73 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../lib/jquery-1.3.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/expander.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.6089552">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.6089552" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/timing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="611" selection-end="611" vertical-scroll-proportion="0.5074627">
-          <folding />
-        </state>
+        <state line="20" column="8" selection-start="611" selection-end="611" vertical-scroll-proportion="0.5074627" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/external/underscore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.42415318">
-          <folding />
-        </state>
+        <state line="35" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.42415318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/qunit/qunit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="5" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/tooltip/tooltip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="7" selection-start="342" selection-end="342" vertical-scroll-proportion="0.6354515" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="88" selection-start="500" selection-end="500" vertical-scroll-proportion="-7.0833335">
+        <state line="24" column="17" selection-start="807" selection-end="827" vertical-scroll-proportion="0.3645485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/qunit/qunit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="272" column="47" selection-start="6667" selection-end="6672" vertical-scroll-proportion="0.07377049" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testrunner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="64" selection-start="349" selection-end="349" vertical-scroll-proportion="-4.9259257">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statesystem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="28" selection-start="5549" selection-end="5549" vertical-scroll-proportion="0.0">
+        <state line="235" column="25" selection-start="6778" selection-end="6778" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete_with.js">
+    <entry file="file://$PROJECT_DIR$/tests/statesystem.tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="1" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/autocomplete/autocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/tooltip/tooltip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="181" selection-end="181" vertical-scroll-proportion="0.1522388">
+        <state line="112" column="9" selection-start="2943" selection-end="2943" vertical-scroll-proportion="0.5136">
           <folding />
         </state>
       </provider>

@@ -56,10 +56,11 @@ function StateSystem(rootSelector) {
 
 StateSystem.prototype = {
     DefineStates: function(/* state1, state2, ... */) {
-        for (var i = 0; i < arguments.length; i++)
+        for (var i = 0; i < arguments.length; i++) {
+            if (arguments[i] == "start")
+                throw new Error("DefineStates: 'start' is a reserved state name");
             this.states.push(new State(arguments[i], this.rootSelector));
-
-        this.currentState = this.states[0];
+        }
     },
 
     Find: function(selector) {
@@ -67,9 +68,6 @@ StateSystem.prototype = {
     },
 
     Goto: function(stateName) {
-        if (!this.currentState)
-            throw new Error("Goto: current state not set");
-
         if (stateName == 'start')
             throw new Error("Goto: Can not go to start state");
 
@@ -94,11 +92,11 @@ StateSystem.prototype = {
 
     In: function(stateName) {
         var state = this.getStateByName(stateName);
-        return new SpecificStateContext(this, state);
+        return new InStateContext(this, state);
     },
 
     InAny: function() {
-        return new SpecificStateContext(this, null);  
+        return new InStateContext(this, null);  
     },
 
     Enter: function(stateName) {
@@ -225,14 +223,14 @@ DomEventContext.prototype = {
     }
 };
 
-function SpecificStateContext(stateSystem, state) {
+function InStateContext(stateSystem, state) {
     this.stateSystem = stateSystem;
     this.state = state;
 }
 
-SpecificStateContext.prototype = {
+InStateContext.prototype = {
     Find: function(selector) {
-        return new SpecificStateElementContext(this.stateSystem, this.state, selector);
+        return new InStateAndElementContext(this.stateSystem, this.state, selector);
     },
 
     On: function(domEventDescription) {
@@ -245,13 +243,13 @@ SpecificStateContext.prototype = {
     }
 };
 
-function SpecificStateElementContext(stateSystem, state, selector) {
+function InStateAndElementContext(stateSystem, state, selector) {
     this.stateSystem = stateSystem;
     this.state = state;
     this.selector = selector;
 }
 
-SpecificStateElementContext.prototype = {
+InStateAndElementContext.prototype = {
     On: function(domEventDescription) {
         domEventDescription = DomEventDescription.normalize(domEventDescription);
         return new DomEventContext(this.stateSystem, this.state, this.selector, domEventDescription);
